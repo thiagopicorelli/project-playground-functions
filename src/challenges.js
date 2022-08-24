@@ -14,8 +14,8 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  return arr.at(-1) + ", " + arr[0];
 }
 
 // Desafio 5
