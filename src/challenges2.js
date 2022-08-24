@@ -19,12 +19,21 @@ function generatePhoneNumber(arr) {
 function triangleCheck(lineA, lineB, lineC) {
   let line = [lineA, lineB, lineC];
   line = line.sort(function (a, b) { return a - b; });
-  return (line[2] < line[0] + line[1]) && (line[1] > Math.abs(line[2] - line[0])); // Encontra as posições máximas e mínimas de cada lado para somente precisar fazer 2 checagens
+  return (line[2] < line[0] + line[1]) && (line[1] > Math.abs(line[2] - line[0])); // Encontra as posições máximas e mínimas de cada lado para somente precisar fazer 2 checagensA
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  const regxNum = /[0-9]+/g;
+  let numsStr = str.match(regxNum);
+  let count = 0;
+  for (let numStr of numsStr) {
+    count += parseInt(numStr, 10);
+  }
+  if (count === 1) {
+    return `${count} copo de água`;
+  }
+  return `${count} copos de água`;
 }
 
 module.exports = {
