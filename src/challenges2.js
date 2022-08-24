@@ -15,10 +15,11 @@ function generatePhoneNumber(arr) {
   const num2 = `${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
   return `(${ddd}) ${num1}-${num2}`;
 }
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let line = [lineA, lineB, lineC];
+  line = line.sort(function (a, b) { return a - b; });
+  return (line[2] < line[0] + line[1]) && (line[1] > Math.abs(line[2] - line[0])); // Encontra as posições máximas e mínimas de cada lado para somente precisar fazer 2 checagens
 }
 
 // Desafio 13
