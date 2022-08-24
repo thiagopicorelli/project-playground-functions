@@ -75,11 +75,37 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let arrStr = Array.from(str);
+  const vowMap = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let letIndex in arrStr) {
+    if (Object.prototype.hasOwnProperty.call(vowMap, arrStr[letIndex])) {
+      arrStr[letIndex] = vowMap[arrStr[letIndex]];
+    }
+  }
+  return arrStr.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let arrStr = Array.from(str);
+  const vowMap = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let letIndex in arrStr) {
+    if (Object.prototype.hasOwnProperty.call(vowMap, arrStr[letIndex])) {
+      arrStr[letIndex] = vowMap[arrStr[letIndex]];
+    }
+  }
+  return arrStr.join('');
 }
 
 // Desafio 10
