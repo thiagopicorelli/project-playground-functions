@@ -16,8 +16,6 @@ function generatePhoneNumber(arr) {
   return `(${ddd}) ${num1}-${num2}`;
 }
 
-console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
